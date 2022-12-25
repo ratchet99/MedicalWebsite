@@ -25,37 +25,37 @@
         <a href="#home">home</a>
         <a href="#services">services</a>
         <a href="#about">about</a>
-        <a href="#book">book 
-             <!--  <form id="login-form">
+        <a href="#book">book </a>
+         <!-- <form id="login-form">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password">
         <input type="submit" value="Log In">
-      </form>
+      </form> -->
       <script>
       
-        var form = document.getElementById("login-form");
+    //     var form = document.getElementById("login-form");
     
         
-        form.addEventListener("submit", function(event) {
+    //     form.addEventListener("submit", function(event) {
           
-          var username = document.getElementById("username").value;
-          var password = document.getElementById("password").value;
+    //       var username = document.getElementById("username").value;
+    //       var password = document.getElementById("password").value;
     
          
-          if (username == "admin" && password == "password") {
+    //       if (username == "admin" && password == "password") {
            
-            window.location.href = "dashboard.html";
-          } else {
+    //         window.location.href = "dashboard.html";
+    //       } else {
           
-            alert("Incorrect username or password. Please try again.");
-          }
+    //         alert("Incorrect username or password. Please try again.");
+    //       }
     
          
-          event.preventDefault();
-        });
-      </script> --> 
+    //       event.preventDefault();
+    //     });
+    //   </script> 
         </a>
     </nav>
 
@@ -141,15 +141,48 @@
         <div class="image">
             <img src="image/book-img.svg" alt="">
         </div>
-
+         
         <form action="">
             <h3>book appointment</h3>
-            <input type="text" placeholder="your name" class="box">
-            <input type="number" placeholder="your number" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="date" class="box">
-            <input type="submit" value="book now" class="btn">
+            <input id="text" type="text" placeholder="your name" class="box">
+            <input id="nr" type="number" placeholder="your number" class="box">
+            <input id="email" type="email" placeholder="your email" class="box">
+            <input id="date" type="date" class="box">
+            <!-- //<input type="submit" value="book now" class="btn"> -->
+            <button class="btn" onclick="handleBook()" type="button">Book</button>
+            
         </form>
+       <script>
+
+        
+        function handleBook() {
+            console.log('button clicked')
+            var text = document.getElementById("text").value;
+            var number = document.getElementById("nr").value;
+            var email = document.getElementById("email").value;
+            var date = document.getElementById ("date"),value;
+           
+        if ((text) && (number) && (email) && (date)) {
+        
+            alert ("You have booked your appointmet!")
+        } else {
+        
+        alert("Please fill all fields");
+        }
+
+        }
+      
+          
+         
+            
+           
+           
+         
+       
+       
+
+       </script>
+
 
     </div>
 
